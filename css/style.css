@@ -1,0 +1,47 @@
+#map_canvas{
+  height: 100%;
+  width: 100%;
+}
+
+#header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#header h1{ text-align: center; }
+#header .menu-btn{
+  text-align: right;
+}
+
+h1, h2, h3 { margin-top: 10px; }
+
+.menu{
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+.menu.open{ display: block; }
+.menu ul{
+  list-style-type: none;
+  text-align: left;
+  font-size: 24;
+}
+.menu a{
+  text-decoration: none;
+  color: #ccc;
+}
+.menu .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
