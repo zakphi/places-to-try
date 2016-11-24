@@ -4,13 +4,12 @@
 }
 
 #header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 #header h1{ text-align: center; }
 #header .menu-btn{
-  text-align: right;
+  float: right;
 }
 
 h1, h2, h3 { margin-top: 10px; }
@@ -47,3 +46,6 @@ h1, h2, h3 { margin-top: 10px; }
 }
 
 #id, #lat, #lng{ display: none; }
+
+label{ width: 100%; }
+label, input{ text-align: center; }
