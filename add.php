@@ -92,8 +92,8 @@
             <input type="text" name="zip" class="form-control">
           </label>
         </div>
-        <input type="button" value="Add Another" onclick="alert('restaurant would be added and page refreshes to allow user to add another restaurant');">
-        <input type="button" value="Save and Finish" onclick="alert('restaurant would be added and send user to homepage');">
+        <input type="button" value="Add Another">
+        <input type="button" value="Save and Finish">
       </form>
     </div>
     
