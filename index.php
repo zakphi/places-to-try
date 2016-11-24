@@ -20,7 +20,6 @@
           <button>Menu</button>
           <div class="menu">
             <a class="close-btn">&times;</a>
-            <!--<p>Hello, user's name </p>-->
             <ul>
               <li><a href="add.php">Add</a></li>
             </ul>
@@ -29,6 +28,14 @@
       </div>
       <div class="row">
         <div id="map_canvas"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table id="locations-table">
+            <h2>Table View</h2>
+            <tr id="table-head"></tr>
+          </table>
+        </div>
       </div>
     </div>
 

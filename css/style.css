@@ -45,3 +45,5 @@ h1, h2, h3 { margin-top: 10px; }
   margin-left: 50px;
   cursor: pointer;
 }
+
+#id, #lat, #lng{ display: none; }

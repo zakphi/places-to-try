@@ -10,7 +10,9 @@ function init() {
     zoomControlOptions: {
       style: google.maps.ZoomControlStyle.DEFAULT,
       position: google.maps.ControlPosition.TOP_RIGHT
-    }
+    },
+    scrollwheel: false,
+    draggable: false,
   };
 
   var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
@@ -31,6 +33,8 @@ function init() {
     map.setCenter(geolocate);
     
   });
+
+  var info_window = new google.maps.InfoWindow();
   
   $.ajax({
     url:"locations.json",
@@ -39,6 +43,7 @@ function init() {
     error:function(data){
       console.log(data.parsererror);
     },
+
     success:function(data){
       $.each(data, function(index,value){
         var id = value.id;
@@ -50,6 +55,19 @@ function init() {
         var lat = value.lat;
         var lng = value.lng;
         var latlngset = new google.maps.LatLng(lat, lng);
+        key_name = Object.keys(value);
+
+        var table_row = `<tr>
+          <td id=`+key_name[0]+`>`+id+`</td>
+          <td>`+name+`</td>
+          <td>`+address+`</td>
+          <td>`+city+`</td>
+          <td>`+state+`</td>
+          <td>`+zip+`</td>
+          <td id=`+key_name[6]+`>`+lat+`</td>
+          <td id=`+key_name[7]+`>`+lng+`</td>
+        </tr>`;
+        $('#locations-table').append(table_row);
     
         var content = '<div class="info-window "><h3>' + name + '</h3>' + address + '<br>' + city + ', ' + state + ' ' + zip + '<br><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';
 
@@ -68,10 +86,11 @@ function init() {
           }
         })(marker, content));
       });
+      for(var i=0;i<key_name.length;++i){
+      	$('#table-head').append("<th id="+key_name[i]+">"+key_name[i]+"</th>");
+      }
     }
   });
-
-  var info_window = new google.maps.InfoWindow();
 }
 
 $('.menu-btn button').click(function() {
