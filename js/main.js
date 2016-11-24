@@ -94,7 +94,7 @@ function init() {
 }
 
 $('.menu-btn button').click(function() {
-  $(this).siblings('.menu').addClass('open');
+  $('.menu').addClass('open');
 });
 
 $('.close-btn').click(function() {
