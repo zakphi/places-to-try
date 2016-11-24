@@ -87,7 +87,7 @@ function init() {
         })(marker, content));
       });
       for(var i=0;i<key_name.length;++i){
-      	$('#table-head').append("<th id="+key_name[i]+">"+key_name[i]+"</th>");
+        $('#table-head').append("<th id="+key_name[i]+">"+key_name[i]+"</th>");
       }
     }
   });
