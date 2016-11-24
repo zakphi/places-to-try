@@ -58,7 +58,7 @@ function init() {
         key_name = Object.keys(value);
 
         var table_row = `<tr>
-        <td id=`+key_name[0]+`>`+id+`</td>
+          <td id=`+key_name[0]+`>`+id+`</td>
           <td>`+name+`</td>
           <td>`+address+`</td>
           <td>`+city+`</td>
