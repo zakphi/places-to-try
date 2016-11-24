@@ -31,7 +31,7 @@ h1, h2, h3 { margin-top: 10px; }
 .menu ul{
   list-style-type: none;
   text-align: left;
-  font-size: 24;
+  font-size: 24px;
 }
 .menu a{
   text-decoration: none;

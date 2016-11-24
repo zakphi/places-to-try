@@ -29,13 +29,13 @@ function init() {
     user_loc_marker.addListener('click', function() {
       alert('your location');
     });
-  
+
     map.setCenter(geolocate);
-    
+
   });
 
   var info_window = new google.maps.InfoWindow();
-  
+
   $.ajax({
     url:"locations.json",
     type:"get",
@@ -58,7 +58,7 @@ function init() {
         key_name = Object.keys(value);
 
         var table_row = `<tr>
-          <td id=`+key_name[0]+`>`+id+`</td>
+        <td id=`+key_name[0]+`>`+id+`</td>
           <td>`+name+`</td>
           <td>`+address+`</td>
           <td>`+city+`</td>
@@ -68,7 +68,7 @@ function init() {
           <td id=`+key_name[7]+`>`+lng+`</td>
         </tr>`;
         $('#locations-table').append(table_row);
-    
+
         var content = '<div class="info-window "><h3>' + name + '</h3>' + address + '<br>' + city + ', ' + state + ' ' + zip + '<br><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';
 
         content += '<a href="edit.php">Edit</a>';
@@ -81,8 +81,8 @@ function init() {
 
         marker.addListener('click', (function(marker, content) {
           return function() {
-              info_window.setContent(content);
-              info_window.open(map, marker);
+            info_window.setContent(content);
+            info_window.open(map, marker);
           }
         })(marker, content));
       });
@@ -93,10 +93,10 @@ function init() {
   });
 }
 
-$('.menu-btn button').click(function() {
+$('.menu-btn').click(function() {
   $('.menu').addClass('open');
 });
 
 $('.close-btn').click(function() {
-  $('.menu').removeClass('open');  
+  $('.menu').removeClass('open');
 });
