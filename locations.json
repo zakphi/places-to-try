@@ -1,132 +1,132 @@
 {
-  "location1":{
-    "id":"0001",
-    "name":"Restaurant",
-    "address":"350 Grand Street",
-    "city":"New York",
-    "state":"NY",
-    "zip":"10002",
-    "lat":"40.717404",
-    "lng":"-73.989611"
+  "location1": {
+    "id": "0001",
+    "name": "Restaurant",
+    "address": "350 Grand Street",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10002",
+    "lat": "40.717404",
+    "lng": "-73.989611"
   },
-  "location2":{
-    "id":"0002",
-    "name":"Restaurant",
-    "address":"227 Bowery",
-    "city":"New York",
-    "state":"NY",
-    "zip":"10002",
-    "lat":"40.721982",
-    "lng":"-73.992836"
+  "location2": {
+    "id": "0002",
+    "name": "Restaurant",
+    "address": "227 Bowery",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10002",
+    "lat": "40.721982",
+    "lng": "-73.992836"
   },
-  "location3":{
-    "id":"0003",
-    "name":"Restaurant",
-    "address":"42 West 18th St",
-    "city":"New York",
-    "state":"NY",
-    "zip":"10011",
-    "lat":"40.739356",
-    "lng":"-73.993962"
+  "location3": {
+    "id": "0003",
+    "name": "Restaurant",
+    "address": "42 West 18th St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10011",
+    "lat": "40.739356",
+    "lng": "-73.993962"
   },
-  "location4":{
-    "id":"0004",
-    "name":"Restaurant",
-    "address":"50 Madison Ave",
-    "city":"New York",
-    "state":"NY",
-    "zip":"10010",
-    "lat":"40.743063",
-    "lng":"-73.986613"
+  "location4": {
+    "id": "0004",
+    "name": "Restaurant",
+    "address": "50 Madison Ave",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10010",
+    "lat": "40.743063",
+    "lng": "-73.986613"
   },
-  "location5":{
-    "id":"0005",
-    "name":"Restaurant",
-    "address":"94 Washington St",
-    "city":"Hoboken",
-    "state":"NJ",
-    "zip":"07030",
-    "lat":"40.737145",
-    "lng":"-74.030934"
+  "location5": {
+    "id": "0005",
+    "name": "Restaurant",
+    "address": "94 Washington St",
+    "city": "Hoboken",
+    "state": "NJ",
+    "zip": "07030",
+    "lat": "40.737145",
+    "lng": "-74.030934"
   },
-  "location6":{
-    "id":"0006",
-    "name":"Restaurant",
-    "address":"280 Grove Street",
-    "city":"Jersey City",
-    "state":"NJ",
-    "zip":"07302",
-    "lat":"40.731997",
-    "lng":"-74.041112"
+  "location6": {
+    "id": "0006",
+    "name": "Restaurant",
+    "address": "280 Grove Street",
+    "city": "Jersey City",
+    "state": "NJ",
+    "zip": "07302",
+    "lat": "40.731997",
+    "lng": "-74.041112"
   },
-  "location7":{
-    "id":"0007",
-    "name":"Restaurant",
-    "address":"350 Montgomery St",
-    "city":"Jersey City",
-    "state":"NJ",
-    "zip":"07302",
-    "lat":"40.731997",
-    "lng":"-74.041112"
+  "location7": {
+    "id": "0007",
+    "name": "Restaurant",
+    "address": "350 Montgomery St",
+    "city": "Jersey City",
+    "state": "NJ",
+    "zip": "07302",
+    "lat": "40.731997",
+    "lng": "-74.041112"
   },
-  "location8":{
-    "id":"0008",
-    "name":"Restaurant",
-    "address":"110 Wolcott St",
-    "city":"Brooklyn",
-    "state":"NY",
-    "zip":"11231",
-    "lat":"40.677872",
-    "lng":"74.012985"
+  "location8": {
+    "id": "0008",
+    "name": "Restaurant",
+    "address": "110 Wolcott St",
+    "city": "Brooklyn",
+    "state": "NY",
+    "zip": "11231",
+    "lat": "40.677872",
+    "lng": "74.012985"
   },
-  "location9":{
-    "id":"0009",
-    "name":"Restaurant",
-    "address":"1 Beard St",
-    "city":"Brooklyn",
-    "state":"NY",
-    "zip":"11231",
-    "lat":"40.672225",
-    "lng":"-74.011139"
+  "location9": {
+    "id": "0009",
+    "name": "Restaurant",
+    "address": "1 Beard St",
+    "city": "Brooklyn",
+    "state": "NY",
+    "zip": "11231",
+    "lat": "40.672225",
+    "lng": "-74.011139"
   },
-  "location10":{
-    "id":"0010",
-    "name":"Restaurant",
-    "address":"95 Greenwich St",
-    "city":"New York",
-    "state":"NY",
-    "zip":"10282",
-    "lat":"40.672225",
-    "lng":"-74.011139"
+  "location10": {
+    "id": "0010",
+    "name": "Restaurant",
+    "address": "95 Greenwich St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10282",
+    "lat": "40.672225",
+    "lng": "-74.011139"
   },
-  "location11":{
-    "id":"0011",
-    "name":"Restaurant",
-    "address":"17 Bowery St",
-    "city":"New York",
-    "state":"NY",
-    "zip":"10002",
-    "lat":"40.714688",
-    "lng":"-73.996827"
+  "location11": {
+    "id": "0011",
+    "name": "Restaurant",
+    "address": "17 Bowery St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10002",
+    "lat": "40.714688",
+    "lng": "-73.996827"
   },
-  "location12":{
-    "id":"0012",
-    "name":"Restaurant",
-    "address":"4 Nevins St",
-    "city":"New York",
-    "state":"NY",
-    "zip":"11217",
-    "lat":"40.688522",
-    "lng":"-73.981099"
+  "location12": {
+    "id": "0012",
+    "name": "Restaurant",
+    "address": "4 Nevins St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "11217",
+    "lat": "40.688522",
+    "lng": "-73.981099"
   },
-  "location13":{
-    "id":"0013",
-    "name":"Restaurant",
-    "address":"767 Hicks St",
-    "city":"New York",
-    "state":"NY",
-    "zip":"11231",
-    "lat":"40.676692",
-    "lng":"-74.004466"
+  "location13": {
+    "id": "0013",
+    "name": "Restaurant",
+    "address": "767 Hicks St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "11231",
+    "lat": "40.676692",
+    "lng": "-74.004466"
   }
 }

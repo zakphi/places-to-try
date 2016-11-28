@@ -100,3 +100,18 @@ $('.menu-btn').click(function() {
 $('.close-btn').click(function() {
   $('.menu').removeClass('open');
 });
+
+$('#add_location').submit( function(e){
+  var formData = new FormData($(this)[0]);
+  $.ajax({
+    url:"ajaxprocess.php",
+    type:"post",
+    data:formData,
+    async:false,
+    success:function(msg){ console.log(msg); },
+    cache:false,
+    contentType:false,
+    processData:false
+  });
+  init();
+  e.preventDefault();

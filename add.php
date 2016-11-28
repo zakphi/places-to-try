@@ -13,7 +13,7 @@
   <body>
     <div class="container-fluid">
       <?php require_once 'nav.php'; ?>
-      <form>
+      <form id="add_location" method="post" action="ajaxprocess.php">
         <div class="form-group">
           <label>Name
             <input type="text" name="name" class="form-control">
@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
           <label>State
-            <select class="form-control">
+            <select name="state" class="form-control">
               <option></option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -92,7 +92,7 @@
             <input type="text" name="zip" class="form-control">
           </label>
         </div>
-        <input type="button" value="Add Another">
+        <input type="submit" value="Add Another">
         <input type="button" value="Save and Finish">
       </form>
     </div>

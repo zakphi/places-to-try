@@ -8,9 +8,7 @@
   align-items: center;
 }
 #header h1{ text-align: center; }
-#header .menu-btn{
-  float: right;
-}
+#header .menu-btn{ float: right; }
 
 h1, h2, h3 { margin-top: 10px; }
 
