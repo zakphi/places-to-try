@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Places to Try</title>
@@ -10,7 +11,7 @@
 
   </head>
   
-	<body>
+  <body>
     <div class="container-fluid">
       <?php require_once 'nav.php'; ?>
       <div class="row">
@@ -32,6 +33,6 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjf0uAhv8nPnIC2v245aqnO7pVwCJuZTs&callback=init">
     </script>
     <script type="text/javascript" src="js/main.js"></script>
-	</body>
+  </body>
 
 </html>
