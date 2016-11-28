@@ -31,7 +31,6 @@ function init() {
     });
 
     map.setCenter(geolocate);
-
   });
 
   var info_window = new google.maps.InfoWindow();
@@ -113,6 +112,5 @@ $('#add_location').submit( function(e){
     contentType:false,
     processData:false
   });
-  init();
   e.preventDefault();
 });
