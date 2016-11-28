@@ -115,3 +115,4 @@ $('#add_location').submit( function(e){
   });
   init();
   e.preventDefault();
+});
