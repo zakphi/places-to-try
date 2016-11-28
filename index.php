@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Places to Try</title>
@@ -32,7 +31,7 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjf0uAhv8nPnIC2v245aqnO7pVwCJuZTs&callback=init">
     </script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 	</body>
 
 </html>
