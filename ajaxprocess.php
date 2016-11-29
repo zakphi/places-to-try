@@ -6,6 +6,28 @@
   $zip = $_POST['zip'];
 //  print_r(get_defined_vars());
 
+// lines 10-26 came from https://www.codeofaninja.com/2014/06/google-maps-geocoding-example-php.html
+  $address = urlencode($address);
+//  echo $address;
+
+  $url = "http://maps.google.com/maps/api/geocode/json?address={$address}";
+  $address = str_replace("+"," ",$address);
+//  echo $address;
+//  echo $url;
+
+  $resp_json = file_get_contents($url);
+//  echo $resp_json;
+
+  $resp = json_decode($resp_json, true);
+//  echo $resp;
+
+  if($resp['status'] == 'OK'){
+    $lat = $resp['results'][0]['geometry']['location']['lat'];
+    $lng = $resp['results'][0]['geometry']['location']['lng'];
+//    echo "lat: $lat";
+//    echo "lng: $lng";
+  }
+
   $location_data = file_get_contents('locations.json');
   $location_array = json_decode($location_data, true);
 //  print_r($location_array);
@@ -24,7 +46,9 @@
     "address" => $address,
     "city" => $city,
     "state" => $state,
-    "zip" => $zip
+    "zip" => $zip,
+    "lat" => $lat,
+    "lng" => $lng
   );
 
   $location_array[$key] = $add_location;
