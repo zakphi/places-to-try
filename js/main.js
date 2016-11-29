@@ -114,3 +114,19 @@ $('#add_location').submit( function(e){
   });
   e.preventDefault();
 });
+
+$('.map-btn').click(function() {
+  $('#map_canvas').css('display','block');
+  $('#locations-table').css('display','none');
+
+  $(this).addClass('button-clicked');
+  $('.table-btn').removeClass('button-clicked');
+});
+
+$('.table-btn').click(function() {
+  $('#map_canvas').css('display','none');
+  $('#locations-table').css('display','block');
+
+  $(this).addClass('button-clicked');
+  $('.map-btn').removeClass('button-clicked');
+});

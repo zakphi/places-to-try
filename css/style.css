@@ -50,3 +50,19 @@ label{ width: 100%; }
 label, input{ text-align: center; }
 
 #locations-table, .info-window{ text-transform: capitalize; }
+
+.view-btns input[type='radio']{ display: none; }
+.view-btns label{ cursor: pointer; }
+
+button{
+  border:1px solid #ccc;
+  background-color: transparent;
+  color: #ccc;
+}
+button:focus{ outline: none; }
+.button-clicked{
+  background-color: #ccc;
+  color: #000;
+}
+
+#locations-table{ display: none; }

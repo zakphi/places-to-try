@@ -18,9 +18,8 @@
         <div id="map_canvas"></div>
       </div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 ">
           <table id="locations-table">
-            <h2>Table View</h2>
             <tr id="table-head"></tr>
           </table>
         </div>
