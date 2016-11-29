@@ -49,4 +49,4 @@ h1, h2, h3 { margin-top: 10px; }
 label{ width: 100%; }
 label, input{ text-align: center; }
 
-#locations-table{ text-transform: capitalize; }
+#locations-table, .info-window{ text-transform: capitalize; }
