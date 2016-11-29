@@ -11,7 +11,7 @@ function init() {
       style: google.maps.ZoomControlStyle.DEFAULT,
       position: google.maps.ControlPosition.TOP_RIGHT
     },
-//    scrollwheel: false,
+    scrollwheel: false,
 //    draggable: false,
   };
 
