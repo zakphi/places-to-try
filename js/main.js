@@ -78,7 +78,7 @@ function init() {
           <td>`+address[0]+`<span>,</span><br>`+address[1]+`<span>,</span><br>`+address[2]+`<span>,</span><br>`+address[3]+`</td>
           <td id=lat>`+lat+`</td>
           <td id=lng>`+lng+`</td>
-          <td><a href="http://maps.google.com/?daddr=`+address[0]+` `+address[1]+`, `+address[2]+` `+address[3]+`" target=_blank>Get Directions</a></td>
+          <td><a href="http://maps.google.com/?daddr=` + address[0] + address[1] + address[2] + address[3] + `" target="_blank">Get Directions</a></td>
         </tr>`;
         $('#locations-table').append(table_row);
 
