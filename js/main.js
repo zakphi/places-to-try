@@ -47,34 +47,48 @@ function init() {
       $.each(data, function(index,value){
         var id = value.id;
         var name = value.name;
-        var address = value.address;
-        var city = value.city;
-        var state = value.state;
-        var zip = value.zip;
+        var address = value.location;
+//        var city = value.city;
+//        var state = value.state;
+//        var zip = value.zip;
         var lat = value.lat;
         var lng = value.lng;
         var latlngset = new google.maps.LatLng(lat, lng);
         key_name = Object.keys(value);
+        var address = address.split(',');
+//        address[0] = address
+//        address[1] = city
+//        address[2] = state
+//        address[3] = zip
 
+        // var table_row = `<tr>
+        //   <td id=`+key_name[0]+`>`+id+`</td>
+        //   <td>`+name+`</td>
+        //   <td>`+address+`</td>
+        //   <td>`+city+`</td>
+        //   <td>`+state+`</td>
+        //   <td>`+zip+`</td>
+        //   <td id=`+key_name[6]+`>`+lat+`</td>
+        //   <td id=`+key_name[7]+`>`+lng+`</td>
+        //   <td><a href="http://maps.google.com/?daddr=`+address+` `+city+`, `+state+` `+zip+`" target=_blank>Get Directions</a></td>
+        // </tr>`;
         var table_row = `<tr>
-          <td id=`+key_name[0]+`>`+id+`</td>
+          <td id=id>`+id+`</td>
           <td>`+name+`</td>
-          <td>`+address+`</td>
-          <td>`+city+`</td>
-          <td>`+state+`</td>
-          <td>`+zip+`</td>
-          <td id=`+key_name[6]+`>`+lat+`</td>
-          <td id=`+key_name[7]+`>`+lng+`</td>
+          <td>`+address[0]+`<span>,</span><br>`+address[1]+`<span>,</span><br>`+address[2]+`<span>,</span><br>`+address[3]+`</td>
+          <td id=lat>`+lat+`</td>
+          <td id=lng>`+lng+`</td>
+          <td><a href="http://maps.google.com/?daddr=`+address[0]+` `+address[1]+`, `+address[2]+` `+address[3]+`" target=_blank>Get Directions</a></td>
         </tr>`;
         $('#locations-table').append(table_row);
 
-        var content = '<div class="info-window "><h3>' + name + '</h3>' + address + '<br>' + city + ', ' + state + ' ' + zip + '<br><a href="http://maps.google.com/?daddr=' + address + ' ' + city + ', ' + state + ' ' + zip + '" target="_blank">Get Directions</a></div>';
+        var content = `<div class="info-window "><h3>` + name + `</h3>` + address[0] + `<br>` + address[1] + `, ` + address[2] + ` ` + address[3] + `<br><a href="http://maps.google.com/?daddr=` + address[0] + address[1] + address[2] + address[3] + `" target="_blank">Get Directions</a></div>`;
 
-        content += '<a href="edit.php">Edit</a>';
+//        content += '<a href="edit.php">Edit</a>';
 
         var marker = new google.maps.Marker({
           map: map,
-          title: city,
+          title: address[1],
           position: latlngset
         });
 
@@ -85,7 +99,7 @@ function init() {
           }
         })(marker, content));
       });
-      for(var i=0;i<key_name.length;++i){
+      for(var i=0;i<key_name.length+1;++i){
         $('#table-head').append("<th id="+key_name[i]+">"+key_name[i]+"</th>");
       }
     }

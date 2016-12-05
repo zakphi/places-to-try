@@ -4,6 +4,8 @@
   $city = $_POST['city'];
   $state = $_POST['state'];
   $zip = $_POST['zip'];
+  $location = $address.', '.$city.', '.$state.', '.$zip;
+//  echo $location;
 //  print_r(get_defined_vars());
 
 // lines 10-26 came from https://www.codeofaninja.com/2014/06/google-maps-geocoding-example-php.html
@@ -28,32 +30,39 @@
 //    echo "lng: $lng";
   }
 
-  $location_data = file_get_contents('locations.json');
-  $location_array = json_decode($location_data, true);
+  $locations_data = file_get_contents('locations.json');
+  $locations_array = json_decode($locations_data, true);
 //  print_r($location_array);
 
-  $location_count = count($location_array) + 1;
-  $key = "location".$location_count;
+  $locations_count = count($locations_array) + 1;
+  $key = "location".$locations_count;
 //  echo $key;
 
-  $id = end($location_array)['id'];
+  $id = end($locations_array)['id'];
   $id = str_pad(++$id, 4, "0", STR_PAD_LEFT);
 //  echo $id;
 
+  // $add_location = array(
+  //   "id" => $id,
+  //   "name" => $name,
+  //   "address" => $address,
+  //   "city" => $city,
+  //   "state" => $state,
+  //   "zip" => $zip,
+  //   "lat" => $lat,
+  //   "lng" => $lng
+  // );
   $add_location = array(
     "id" => $id,
     "name" => $name,
-    "address" => $address,
-    "city" => $city,
-    "state" => $state,
-    "zip" => $zip,
+    "location" => $location,
     "lat" => $lat,
     "lng" => $lng
   );
 
-  $location_array[$key] = $add_location;
+  $locations_array[$key] = $add_location;
 //  print_r($location_array);
 
-  $json_data = json_encode($location_array);
+  $json_data = json_encode($locations_array);
   file_put_contents('locations.json', $json_data);
 ?>

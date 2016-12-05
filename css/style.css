@@ -44,25 +44,54 @@ h1, h2, h3 { margin-top: 10px; }
   cursor: pointer;
 }
 
-#id, #lat, #lng{ display: none; }
+.view-btns button{
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
 
-label{ width: 100%; }
-label, input{ text-align: center; }
+#id, #lat, #lng, #locations-table, #locations-table th:last-of-type{ display: none; }
+
+#add_location label{ width: 100%; }
+#add_location label, input{ text-align: center; }
 
 #locations-table, .info-window{ text-transform: capitalize; }
 
 .view-btns input[type='radio']{ display: none; }
 .view-btns label{ cursor: pointer; }
-
-button{
+.view-btns button{
   border:1px solid #ccc;
   background-color: transparent;
   color: #ccc;
 }
-button:focus{ outline: none; }
-.button-clicked{
+.view-btns button:focus{ outline: none; }
+.view-btns .button-clicked{
   background-color: #ccc;
   color: #000;
 }
+.view-btns .map-btn{ margin-bottom: 10px; }
 
-#locations-table{ display: none; }
+
+#locations-table th, #locations-table td{ text-align: center; }
+#locations-table th{ border-top: none; }
+#locations-table br{ display: none; }
+#locations-table{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.info-window br{ display: block; }
+
+/*span{ display: block; }*/
+
+@media only screen and (min-width : 768px){
+  #locations-table{
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width : 992px){
+  #locations-table{
+    width: 50%;
+  }
+}
