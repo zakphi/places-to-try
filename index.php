@@ -11,7 +11,7 @@
 
   </head>
   
-  <body>
+  <body class="home">
     <div class="container-fluid">
       <?php require_once 'nav.php'; ?>
       <div class="row">

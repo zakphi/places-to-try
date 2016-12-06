@@ -49,11 +49,13 @@ h1, h2, h3 { margin-top: 10px; }
   margin: 0 auto;
   width: 50%;
 }
+.view-btns{ display: none; }
 
 #id, #lat, #lng, #locations-table, #locations-table th:last-of-type{ display: none; }
 
 #add_location label{ width: 100%; }
 #add_location label, input{ text-align: center; }
+#add_location select { text-align-last:center; }
 
 #locations-table, .info-window{ text-transform: capitalize; }
 

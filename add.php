@@ -95,6 +95,8 @@
         <input type="submit" value="Add Another">
         <input type="button" value="Save and Finish">
       </form>
+
+      <div id="added"></div>
     </div>
     
     <script src="js/jquery.min.js"></script>

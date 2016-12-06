@@ -144,3 +144,7 @@ $('.table-btn').click(function() {
   $(this).addClass('button-clicked');
   $('.map-btn').removeClass('button-clicked');
 });
+
+if( $('body').hasClass('home') ){
+	$('.view-btns').css('display','block');
+}
