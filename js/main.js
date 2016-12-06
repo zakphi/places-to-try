@@ -114,19 +114,46 @@ $('.close-btn').click(function() {
   $('.menu').removeClass('open');
 });
 
-$('#add_location').submit( function(e){
-  var formData = new FormData($(this)[0]);
-  $.ajax({
-    url:"ajaxprocess.php",
-    type:"post",
-    data:formData,
-    async:false,
-    success:function(msg){ console.log(msg); },
-    cache:false,
-    contentType:false,
-    processData:false
+$('#add').click(function(){
+  console.log('add another button clicked');
+  $('#add_location').submit( function(e){
+    var formData = new FormData($(this)[0]);
+    $.ajax({
+      url:"ajaxprocess.php",
+      type:"post",
+      data:formData,
+      async:false,
+      success:function(msg){
+        var name = $('input[name="name"]').val();
+        $('#added').html(name+" was added");
+        $('#add_location')[0].reset();
+      },
+      cache:false,
+      contentType:false,
+      processData:false
+    });
+    e.preventDefault();
   });
-  e.preventDefault();
+});
+
+$('#done').click(function(){
+  console.log('save and finish button clicked');
+  $('#add_location').submit( function(e){
+    var formData = new FormData($(this)[0]);
+    $.ajax({
+      url:"ajaxprocess.php",
+      type:"post",
+      data:formData,
+      async:false,
+      success:function(msg){
+        window.location.href = 'index.php';
+      },
+      cache:false,
+      contentType:false,
+      processData:false
+    });
+    e.preventDefault();
+  });
 });
 
 $('.map-btn').click(function() {
@@ -146,5 +173,5 @@ $('.table-btn').click(function() {
 });
 
 if( $('body').hasClass('home') ){
-	$('.view-btns').css('display','block');
+  $('.view-btns').css('display','block');
 }
