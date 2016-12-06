@@ -8,7 +8,7 @@
   align-items: center;
   height: 10vh;
 }
-#header h1{ text-align: center; }
+#header h1, h2{ text-align: center; }
 #header .menu-btn{ float: right; }
 
 h1, h2, h3 { margin-top: 10px; }
@@ -53,9 +53,9 @@ h1, h2, h3 { margin-top: 10px; }
 
 #id, #lat, #lng, #locations-table, #locations-table th:last-of-type{ display: none; }
 
-#add_location label{ width: 100%; }
-#add_location label, input{ text-align: center; }
-#add_location select { text-align-last:center; }
+form label{ width: 100%; }
+form label, input{ text-align: center; }
+form select { text-align-last:center; }
 
 #locations-table, .info-window{ text-transform: capitalize; }
 
@@ -83,8 +83,6 @@ h1, h2, h3 { margin-top: 10px; }
 }
 
 .info-window br{ display: block; }
-
-/*span{ display: block; }*/
 
 @media only screen and (min-width : 768px){
   #locations-table{
