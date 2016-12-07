@@ -7,6 +7,7 @@
   </div>
   <div class="menu">
     <a class="close-btn">&times;</a>
+    <button class="login-btn"><a href="login.php">Login</a></button>
     <ul>
       <li><a href="index.php">Home</a></li>
       <li><a href="add.php">Add</a></li>

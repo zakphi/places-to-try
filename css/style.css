@@ -61,17 +61,17 @@ form select { text-align-last:center; }
 
 .view-btns input[type='radio']{ display: none; }
 .view-btns label{ cursor: pointer; }
-.view-btns button{
+.menu button{
   border:1px solid #ccc;
   background-color: transparent;
   color: #ccc;
 }
-.view-btns button:focus{ outline: none; }
-.view-btns .button-clicked{
+.menu button:focus{ outline: none; }
+.menu .button-clicked{
   background-color: #ccc;
   color: #000;
 }
-.view-btns .map-btn{ margin-bottom: 10px; }
+.menu .map-btn{ margin-bottom: 10px; }
 
 
 #locations-table th, #locations-table td{ text-align: center; }

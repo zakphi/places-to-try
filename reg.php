@@ -28,7 +28,7 @@
         <input type="password" name="pw" class="form-control" required><br>
       </label>
       <br>
-      <input type="submit" name="submit" id="submit" class="btn btn-default" value="Submit">
+      <input type="submit" name="submit" id="submit" value="Submit">
       </form>
       <?php
         if(isset($_POST['submit'])){

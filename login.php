@@ -23,7 +23,7 @@
           <input type="password" name="pw" class="form-control" required><br>
         </label>
         <br>
-        <input type="submit" name="submit" class="btn btn-default" value="Submit">
+        <input type="submit" name="submit" value="Submit">
       </form>
       <?php
         if(isset($_POST['submit'])){
@@ -33,9 +33,6 @@
             $email = $_POST['email'];
             $pw = $_POST['pw'];
 
-            // school
-            // $connection = mysqli_connect("localhost","root","","reg");
-            // home
             $connection = mysqli_connect("localhost","root","root","ptt");
 
             $query = "SELECT * FROM users WHERE pw='$pw' AND email='$email' ";
@@ -44,26 +41,10 @@
 
             $row = mysqli_num_rows($loginCheck);
 
-//            echo $row;
-//
-//            echo '<br>';
-
             if($row == 1){
               while($row = mysqli_fetch_assoc($loginCheck) ){
-//                $_SESSION["uid"] = $row["uid"];
-//                echo $_SESSION["uid"].'<br>';
-//
-//                $_SESSION["time"] = $row["time"];
-//                echo $_SESSION["time"].'<br>';
-
                 $_SESSION["name"] = $row["name"];
                 echo $_SESSION["name"].'<br>';
-
-//                $_SESSION["email"] = $row["email"];
-//                echo $_SESSION["email"].'<br>';
-//
-//                $_SESSION["pw"] = $row["pw"];
-//                echo $_SESSION["pw"].'<br>';
 
                 echo "<a href='profile.php'>proceed to profile</a>";
               }
