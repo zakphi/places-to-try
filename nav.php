@@ -10,6 +10,7 @@
     <?php
       if($loggedin == 0){
         echo '<button class="login-btn"><a href="login.php">login</a></button>';
+        echo '<button class="reg-btn"><a href="reg.php">register</a></button>';
       }
       else {
         echo '

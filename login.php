@@ -24,10 +24,10 @@
             $pw = $_POST['pw'];
 
             // home
-            // $connection = mysqli_connect("localhost","root","root","ptt");
+            $connection = mysqli_connect("localhost","root","root","ptt");
 
             // school
-            $connection = mysqli_connect("localhost","root","","ptt");
+//            $connection = mysqli_connect("localhost","root","","ptt");
 
             $query = "SELECT * FROM users WHERE ( name='$name' OR email='$email') AND pw='$pw' ";
 
@@ -50,9 +50,4 @@
         }
       ?>
     </div>
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
-</html>
+<?php require_once 'footer.php'; ?>
