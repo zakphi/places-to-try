@@ -31,6 +31,7 @@ h1, h2, h3 { margin-top: 10px; }
   text-align: left;
   font-size: 24px;
   margin: 0;
+  padding: 0;
 }
 .menu a{
   text-decoration: none;
@@ -45,10 +46,11 @@ h1, h2, h3 { margin-top: 10px; }
   cursor: pointer;
 }
 .menu h2 span{ text-transform: capitalize; }
+.menu h2{ color: #ccc; }
 
-.view-btns button{
+.menu button{
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 50%;
 }
 .view-btns{ display: none; }
@@ -73,8 +75,6 @@ form select { text-align-last:center; }
   background-color: #ccc;
   color: #000;
 }
-.menu .map-btn{ margin-bottom: 10px; }
-
 
 #locations-table th, #locations-table td{ text-align: center; }
 #locations-table th{ border-top: none; }
