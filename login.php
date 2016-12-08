@@ -4,8 +4,8 @@
       <?php require_once "nav.php"; ?>
       <h2>Login</h2>
       <form method="post" action="login.php">
-        <label>E-mail
-          <input type="email" name="email" class="form-control" required><br>
+        <label>Username or e-mail
+          <input type="text" name="login" class="form-control" required><br>
         </label>
           <br>
         <label>Password
@@ -16,10 +16,11 @@
       </form>
       <?php
         if(isset($_POST['submit'])){
-          if (empty($_POST['email']) || empty($_POST['pw']) ){
+          if (empty($_POST['login']) || empty($_POST['pw']) ){
             echo 'you left something blank';
           }else{
-            $email = $_POST['email'];
+            $name= $_POST['login'];
+            $email = $_POST['login'];
             $pw = $_POST['pw'];
 
             // home
@@ -28,7 +29,7 @@
             // school
             $connection = mysqli_connect("localhost","root","","ptt");
 
-            $query = "SELECT * FROM users WHERE pw='$pw' AND email='$email' ";
+            $query = "SELECT * FROM users WHERE ( name='$name' OR email='$email') AND pw='$pw' ";
 
             $loginCheck = mysqli_query($connection, $query);
 
@@ -38,8 +39,6 @@
               while($row = mysqli_fetch_assoc($loginCheck) ){
                 $_SESSION["name"] = $row["name"];
                 $_SESSION['loggedin'] = 1;
-
-                // echo "<a href='profile.php'>proceed to profile</a>";
 
                 header("location: index.php");
               }
