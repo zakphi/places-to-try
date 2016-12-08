@@ -1,15 +1,4 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Document</title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
+<?php require_once 'header.php'; ?>
   <body>
     <div class="container-fluid">
       <?php require_once "nav.php"; ?>
@@ -33,7 +22,11 @@
             $email = $_POST['email'];
             $pw = $_POST['pw'];
 
-            $connection = mysqli_connect("localhost","root","root","ptt");
+            // home
+            // $connection = mysqli_connect("localhost","root","root","ptt");
+
+            // school
+            $connection = mysqli_connect("localhost","root","","ptt");
 
             $query = "SELECT * FROM users WHERE pw='$pw' AND email='$email' ";
 
@@ -44,9 +37,11 @@
             if($row == 1){
               while($row = mysqli_fetch_assoc($loginCheck) ){
                 $_SESSION["name"] = $row["name"];
-                echo $_SESSION["name"].'<br>';
+                $_SESSION['loggedin'] = 1;
 
-                echo "<a href='profile.php'>proceed to profile</a>";
+                // echo "<a href='profile.php'>proceed to profile</a>";
+
+                header("location: index.php");
               }
             }else{
               echo 'try again';

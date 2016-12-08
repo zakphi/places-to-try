@@ -1,16 +1,4 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Register</title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  
+<?php require_once 'header.php'; ?>
   <body>
     <div class="container-fluid">
       <?php require_once "nav.php"; ?>
@@ -36,10 +24,11 @@
           $email= $_POST['email'];
           $pw = $_POST['pw'];
 
-          // school
-          // $connection = mysqli_connect("localhost","root","","reg");
           // home
-          $connection = mysqli_connect("localhost","root","root","ptt");
+          // $connection = mysqli_connect("localhost","root","root","ptt");
+
+          // school
+          $connection = mysqli_connect("localhost","root","","ptt");
 
           $query= "INSERT INTO users (`uid`, `time`, `name`, `email`, `pw`)
           VALUES (NULL, NULL, '$name','$email','$pw');";

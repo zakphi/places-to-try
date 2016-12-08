@@ -30,6 +30,7 @@ h1, h2, h3 { margin-top: 10px; }
   list-style-type: none;
   text-align: left;
   font-size: 24px;
+  margin: 0;
 }
 .menu a{
   text-decoration: none;
@@ -43,6 +44,7 @@ h1, h2, h3 { margin-top: 10px; }
   margin-left: 50px;
   cursor: pointer;
 }
+.menu h2 span{ text-transform: capitalize; }
 
 .view-btns button{
   display: block;
