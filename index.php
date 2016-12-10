@@ -15,6 +15,9 @@
         <input type="submit" name="submit" value="Submit">
       </form>
       <?php
+        if( isset($_SESSION['loggedin']) ){
+          header("location: map.php");
+        }
         if(isset($_POST['submit'])){
           if (empty($_POST['login']) || empty($_POST['pw']) ){
             echo 'you left something blank';
