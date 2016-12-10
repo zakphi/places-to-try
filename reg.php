@@ -44,8 +44,8 @@
           fopen('data/'.$locations_file, 'w');
 
           if($connection){
-//            echo "<br>new record created";
-            header("location: add.php");
+            echo "new record created";
+//            header("location: add.php");
           }else{
             echo $connection->error;
           }

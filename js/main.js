@@ -38,7 +38,7 @@ $('#done').click(function(){
       data:formData,
       async:false,
       success:function(msg){
-        window.location.href = 'index.php';
+        window.location.href = 'map.php';
       },
       cache:false,
       contentType:false,
@@ -64,7 +64,7 @@ $('.table-btn').click(function() {
   $('.map-btn').removeClass('button-clicked');
 });
 
-if( $('body').hasClass('home') ){
+if( $('body').hasClass('map') ){
   $('.view-btns').css('display','block');
   var a = document.createElement('script');
   a.async = true;

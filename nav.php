@@ -9,7 +9,7 @@
     <a class="close-btn">&times;</a>
     <?php
       if($loggedin == 0){
-        echo '<button class="login-btn"><a href="login.php">login</a></button>';
+        echo '<button class="login-btn"><a href="index.php">login</a></button>';
         echo '<button class="reg-btn"><a href="reg.php">register</a></button>';
       }
       else {
@@ -17,7 +17,7 @@
           <h2>Hello <span class="un">'.$_SESSION["name"].'</span></h2>
           <div class="loggedin-nav">
           <ul>
-            <li><button><a href="index.php">Home</a></li></button>
+            <li><button><a href="map.php">Map</a></li></button>
             <li><button><a href="add.php">Add</a></li></button>
           </ul>
           <div class="view-btns">

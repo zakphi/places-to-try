@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Covered+By+Your+Grace|Gloria+Hallelujah|Indie+Flower|Shadows+Into+Light|Shadows+Into+Light+Two');
+
+#ad{font-family: 'Architects Daughter', cursive;}
+#cbyg{font-family: 'Covered By Your Grace', cursive;}
+#gh{font-family: 'Gloria Hallelujah', cursive;}
+#if{font-family: 'Indie Flower', cursive;}
+#sil{font-family: 'Shadows Into Light', cursive;}
+#sil2{font-family: 'Shadows Into Light Two', cursive;}
+
 #map_canvas{
   height: 90vh;
   width: 100%;
