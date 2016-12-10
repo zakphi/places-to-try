@@ -40,6 +40,7 @@
             if($row == 1){
               while($row = mysqli_fetch_assoc($loginCheck) ){
                 $_SESSION["name"] = $row["name"];
+                $_SESSION['uid'] = str_pad($row['uid'], 4, "0", STR_PAD_LEFT);
                 $_SESSION['loggedin'] = 1;
 
                 header("location: map.php");

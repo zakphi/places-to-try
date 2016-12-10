@@ -1,4 +1,11 @@
-<?php require_once 'header.php'; ?>
+<?php require_once 'header.php';
+  $json_file = 'data/'.$_SESSION['name'].'_'.$_SESSION['uid'].'.json';
+  if( filesize($json_file) == 0 ){
+    echo "<script> var json_file = 'locations.json'; </script>";
+  }else{
+    echo "<script> var json_file = '$json_file'; </script>";
+  }
+?>
   <body class="map">
     <div class="container-fluid">
       <?php require_once 'nav.php'; ?>
