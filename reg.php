@@ -33,16 +33,19 @@
           $query= "INSERT INTO users (`uid`, `time`, `name`, `email`, `pw`)
           VALUES (NULL, NULL, '$name','$email','$pw');";
 
-          $query2 = "SELECT uid FROM users ORDER BY uid DESC LIMIT 1;";
-          $last_uid = mysqli_query($connection, $query2);
-          echo $last_uid;
+          $last_uid_query = "SELECT uid FROM users ORDER BY uid DESC LIMIT 1;";
+          $last_uid = mysqli_query($connection, $last_uid_query);
+          $last_uid_arr = mysqli_fetch_array($last_uid);
+          $new_last_uid = $last_uid_arr['uid'];
+          $new_last_uid = str_pad(++$new_last_uid, 4, "0", STR_PAD_LEFT);
 
-          $locations_file = $name.'.json';
-          echo $locations_file;
+          $locations_file = $name.'_'.$new_last_uid.'.json';
+//          echo $locations_file.' file created';
           fopen('data/'.$locations_file, 'w');
 
           if($connection){
-            echo "<br>new record created";
+//            echo "<br>new record created";
+            header("location: add.php");
           }else{
             echo $connection->error;
           }
