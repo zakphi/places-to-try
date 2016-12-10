@@ -5,17 +5,14 @@
       <h2>Register</h2>
       <form method="post" action="reg.php">
         <label>Name
-          <input type="text" name="name" class="form-control test-li" required><br>
+          <input type="text" name="name" class="form-control test-li" required>
         </label>
-        <br>
         <label>E-mail
-          <input type="email" name="email" class="form-control" id="test-li-email" required><br>
+          <input type="email" name="email" class="form-control" id="test-li-email" required>
         </label>
-        <br>
         <label>Password
-          <input type="password" name="pw" class="form-control test-li" required><br>
+          <input type="password" name="pw" class="form-control test-li" required>
         </label>
-        <br>
         <input type="submit" name="submit" id="submit" value="Submit">
       </form>
       <?php

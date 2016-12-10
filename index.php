@@ -5,13 +5,12 @@
       <h2>Login</h2>
       <form method="post" action="#">
         <label>Username or e-mail
-          <input type="text" name="login" class="form-control" required><br>
+          <input type="text" name="login" class="form-control" required>
         </label>
-          <br>
         <label>Password
-          <input type="password" name="pw" class="form-control" required><br>
+          <input type="password" name="pw" class="form-control" required>
         </label>
-        <br>
+        <p>New User? <a href="reg.php">Sign Up!</a></p>
         <input type="submit" name="submit" value="Submit">
       </form>
       <?php
