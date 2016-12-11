@@ -1,8 +1,8 @@
 <?php
-	session_start();
-	if( isset($_SESSION['loggedin']) ){
-		$loggedin = $_SESSION['loggedin'];
-	} else{ $loggedin = 0; }
+  session_start();
+  if( isset($_SESSION['loggedin']) ){
+    $loggedin = $_SESSION['loggedin'];
+  } else{ $loggedin = 0; }
 ?>
 <!DOCTYPE html>
 <html>

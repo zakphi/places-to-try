@@ -36,13 +36,12 @@ function init() {
   var info_window = new google.maps.InfoWindow();
 
   $.ajax({
-    url:"locations.json",
+    url:json_file,
     type:"get",
     dataType:"json",
     error:function(data){
       console.log(data.parsererror);
     },
-
     success:function(data){
       $.each(data, function(index,value){
         var id = value.id;

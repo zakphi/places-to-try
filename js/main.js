@@ -38,7 +38,7 @@ $('#done').click(function(){
       data:formData,
       async:false,
       success:function(msg){
-        window.location.href = 'index.php';
+        window.location.href = 'map.php';
       },
       cache:false,
       contentType:false,
@@ -64,7 +64,7 @@ $('.table-btn').click(function() {
   $('.map-btn').removeClass('button-clicked');
 });
 
-if( $('body').hasClass('home') ){
+if( $('body').hasClass('map') ){
   $('.view-btns').css('display','block');
   var a = document.createElement('script');
   a.async = true;
@@ -73,3 +73,10 @@ if( $('body').hasClass('home') ){
   a.src = 'https://maps.googleapis.com/maps/api/js?key='+api_key+'&callback=init';
   $('body').append(a);
 }
+
+var lorem = new Lorem;
+lorem.type = Lorem.TEXT;
+lorem.query = '1w';
+var blah = lorem.createLorem(document.getElementById('lorem'));
+$(".test-li").val(blah);
+$("#test-li-email").val(blah+"@gmail.com");
