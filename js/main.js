@@ -81,4 +81,4 @@ lorem.query = '1w';
 var blah = lorem.createLorem(document.getElementById('lorem'));
 $(".test-li").val(blah);
 $("#test-li-email").val(blah+"@gmail.com");
-/*
+*/
