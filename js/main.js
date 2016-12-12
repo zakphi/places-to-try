@@ -74,9 +74,11 @@ if( $('body').hasClass('map') ){
   $('body').append(a);
 }
 
+/*
 var lorem = new Lorem;
 lorem.type = Lorem.TEXT;
 lorem.query = '1w';
 var blah = lorem.createLorem(document.getElementById('lorem'));
 $(".test-li").val(blah);
 $("#test-li-email").val(blah+"@gmail.com");
+/*
