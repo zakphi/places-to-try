@@ -1,4 +1,5 @@
 <?php
+  session_start();
   $name = $_POST['name'];
   $address= $_POST['address'];
   $city = $_POST['city'];
@@ -7,6 +8,8 @@
   $location = $address.', '.$city.', '.$state.', '.$zip;
 //  echo $location;
 //  print_r(get_defined_vars());
+
+  $json_file = 'data/'.$_SESSION['name'].'_'.$_SESSION['uid'].'.json';
 
 // lines 10-26 came from https://www.codeofaninja.com/2014/06/google-maps-geocoding-example-php.html
   $address = urlencode($address);
@@ -30,7 +33,7 @@
 //    echo "lng: $lng";
   }
 
-  $locations_data = file_get_contents('locations.json');
+  $locations_data = file_get_contents($json_file);
   $locations_array = json_decode($locations_data, true);
 //  print_r($location_array);
 
@@ -64,5 +67,5 @@
 //  print_r($location_array);
 
   $json_data = json_encode($locations_array);
-  file_put_contents('locations.json', $json_data);
+  file_put_contents($json_file, $json_data);
 ?>

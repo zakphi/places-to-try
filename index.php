@@ -26,10 +26,10 @@
             $pw = $_POST['pw'];
 
             // home
-            $connection = mysqli_connect("localhost","root","root","ptt");
+            // $connection = mysqli_connect("localhost","root","root","ptt");
 
             // school
-//            $connection = mysqli_connect("localhost","root","","ptt");
+            $connection = mysqli_connect("localhost","root","","ptt");
 
             $query = "SELECT * FROM users WHERE ( name='$name' OR email='$email') AND pw='$pw' ";
 

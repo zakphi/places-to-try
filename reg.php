@@ -22,10 +22,10 @@
           $pw = $_POST['pw'];
 
 //        home
-          $connection = mysqli_connect("localhost","root","root","ptt");
+          // $connection = mysqli_connect("localhost","root","root","ptt");
 
 //          school
-//          $connection = mysqli_connect("localhost","root","","ptt");
+         $connection = mysqli_connect("localhost","root","","ptt");
 
           $query= "INSERT INTO users (`uid`, `time`, `name`, `email`, `pw`)
           VALUES (NULL, NULL, '$name','$email','$pw');";
@@ -33,16 +33,20 @@
           $last_uid_query = "SELECT uid FROM users ORDER BY uid DESC LIMIT 1;";
           $last_uid = mysqli_query($connection, $last_uid_query);
           $last_uid_arr = mysqli_fetch_array($last_uid);
+          print_r($last_uid_arr);
+          echo "<br>";
           $new_last_uid = $last_uid_arr['uid'];
           $new_last_uid = str_pad(++$new_last_uid, 4, "0", STR_PAD_LEFT);
+          echo 'new last uid '.$new_last_uid.'<br>';
+          $_SESSION['uid'] = $new_last_uid;
 
           $locations_file = $name.'_'.$new_last_uid.'.json';
-//          echo $locations_file.' file created';
+          echo $locations_file.' file created';
           fopen('data/'.$locations_file, 'w');
 
           if($connection){
-            echo "new record created";
-//            header("location: add.php");
+            // echo "new record created";
+           header("location: add.php");
           }else{
             echo $connection->error;
           }
@@ -51,7 +55,7 @@
           
           $_SESSION['loggedin'] = 1;
           $_SESSION['name'] = $name;
-          header("location: map.php");
+          // header("location: map.php");
 
           mysqli_close($connection);
         }
