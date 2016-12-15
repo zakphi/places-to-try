@@ -2,7 +2,7 @@
   <body>
     <div class="container-fluid">
       <?php require_once 'nav.php'; ?>
-      <form id="add_location" method="post" action="ajaxprocess.php">
+      <form id="add_location" method="post">
         <div class="form-group">
           <label>Name
             <input type="text" name="name" class="form-control">
@@ -82,7 +82,10 @@
           </label>
         </div>
         <input type="submit" id="add" value="Add Another">
-        <input type="submit" id="done" value="Save and Finish">
+        <!-- <button id="add">Add Another</button> -->
+        <input type="button" id="done" value="Save and Finish">
+        <!-- <a href="#" id="add">Add Another</a> -->
+        <!-- <a href="#" id="done">Save and Finish</a> -->
       </form>
 
       <div id="added"></div>

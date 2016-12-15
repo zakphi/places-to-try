@@ -46,7 +46,6 @@
 
           if($connection){
             // echo "new record created";
-           header("location: add.php");
           }else{
             echo $connection->error;
           }
@@ -55,7 +54,7 @@
           
           $_SESSION['loggedin'] = 1;
           $_SESSION['name'] = $name;
-          // header("location: map.php");
+          header("location: map.php");
 
           mysqli_close($connection);
         }
