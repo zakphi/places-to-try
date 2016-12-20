@@ -82,10 +82,7 @@
           </label>
         </div>
         <input type="submit" id="add" value="Add Another">
-        <!-- <button id="add">Add Another</button> -->
-        <input type="button" id="done" value="Save and Finish">
-        <!-- <a href="#" id="add">Add Another</a> -->
-        <!-- <a href="#" id="done">Save and Finish</a> -->
+        <input type="submit" id="done" value="Save and Finish">
       </form>
 
       <div id="added"></div>
