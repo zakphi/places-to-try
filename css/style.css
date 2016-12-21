@@ -94,6 +94,10 @@ form select { text-align-last:center; }
   #locations-table{
     width: 75%;
   }
+  form{
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width : 992px){
