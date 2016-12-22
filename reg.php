@@ -13,7 +13,7 @@
         <label>Password
           <input type="password" name="pw" class="form-control test-li" required>
         </label>
-        <input type="submit" name="submit" id="submit" value="Submit">
+        <button type="submit" name="submit" id="submit">Submit</button>
       </form>
       <?php
         if(isset($_POST['submit'])){

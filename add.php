@@ -81,8 +81,10 @@
             <input type="text" name="zip" class="form-control">
           </label>
         </div>
-        <input type="submit" id="add" value="Add Another">
-        <input type="submit" id="done" value="Save and Finish">
+        <div id="submit-buttons">
+          <button type="submit" id="add">Add</button>
+          <button type="button" id="done">Done</button>
+        </div>
       </form>
 
       <div id="added"></div>

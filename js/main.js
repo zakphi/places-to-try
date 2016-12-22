@@ -15,7 +15,7 @@ $('.close-btn').click(function() {
 //       type:"post",
 //       data:formData,
 //       async:false,
-//       success:function(msg){
+//       success:function(){
 //         var name = $('input[name="name"]').val();
 //         $('#added').html(name+" was added");
 //       },
@@ -39,7 +39,7 @@ $('.close-btn').click(function() {
 //   //     type:"post",
 //   //     data:formData,
 //   //     async:false,
-//   //     success:function(msg){
+//   //     success:function(){
 //   //       window.location.href = 'map.php';
 //   //     },
 //   //     cache:false,
@@ -68,6 +68,8 @@ function add_location(){
     e.preventDefault();
     $('#add_location')[0].reset();
   });
+  $('#submit-buttons #done').show();
+  $('#submit-buttons #add').hide();
 }
 
 $('#add').click(function(){
@@ -75,8 +77,23 @@ $('#add').click(function(){
 });
 
 $('#done').click(function(){
-  add_location();
+  // add_location();
   window.location.href = 'map.php';
+});
+
+$('#submit-buttons #add').hide();
+$("input[name='name']").keyup(function(){
+   console.log('test');
+   // $('#submit-buttons').html('<button type="submit" id="add">Add</button>');
+   $('#submit-buttons #add').show();
+   $('#submit-buttons #done').hide();
+   var location_name = $('input[name="name"]').val();
+   if(location_name == ""){
+    console.log('test 2');
+    // $('#submit-buttons').html('<button type="button" id="done">Done</button>');
+    $('#submit-buttons #done').show();
+    $('#submit-buttons #add').hide();
+   }
 });
 
 $('.map-btn').click(function() {

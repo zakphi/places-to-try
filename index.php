@@ -11,7 +11,7 @@
           <input type="password" name="pw" class="form-control" required>
         </label>
         <p>New User? <a href="reg.php">Sign Up!</a></p>
-        <input type="submit" name="submit" value="Submit">
+        <button type="submit" name="submit">Submit</button>
       </form>
       <?php
         if( isset($_SESSION['loggedin']) ){
