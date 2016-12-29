@@ -2,25 +2,25 @@
   <body>
     <div class="container-fluid">
       <?php require_once 'nav.php'; ?>
-      <form id="add_location" method="post">
+      <form id="add_location" method="post" action="ajaxprocess.php">
         <div class="form-group">
           <label>Name
-            <input type="text" name="name" class="form-control">
+            <input type="text" name="name" id="loc_name" class="form-control">
           </label>
         </div>
         <div class="form-group">
           <label>Address
-            <input type="text" name="address" class="form-control">
+            <input type="text" name="address" id="loc_addr" class="form-control">
           </label>
         </div>
         <div class="form-group">
           <label>City
-            <input type="text" name="city" class="form-control">
+            <input type="text" name="city" id="loc_city" class="form-control">
           </label>
         </div>
         <div class="form-group">
           <label>State
-            <select name="state" class="form-control">
+            <select name="state" class="form-control" id="loc_state">
               <option></option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -78,7 +78,7 @@
         </div>
         <div class="form-group">
           <label>Zip
-            <input type="text" name="zip" class="form-control">
+            <input type="text" name="zip" id="loc_zip" class="form-control">
           </label>
         </div>
         <div id="submit-buttons">
