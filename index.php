@@ -21,7 +21,7 @@
           if (empty($_POST['login']) || empty($_POST['pw']) ){
             echo 'you left something blank';
           }else{
-            $name= $_POST['login'];
+            $un = $_POST['login'];
             $email = $_POST['login'];
             $pw = $_POST['pw'];
 
@@ -31,7 +31,7 @@
             // school
             $connection = mysqli_connect("localhost","root","","ptt");
 
-            $query = "SELECT * FROM users WHERE ( name='$name' OR email='$email') AND pw='$pw' ";
+            $query = "SELECT * FROM users WHERE ( un='$un' OR email='$email') AND pw='$pw' ";
 
             $loginCheck = mysqli_query($connection, $query);
 
@@ -39,7 +39,8 @@
 
             if($row == 1){
               while($row = mysqli_fetch_assoc($loginCheck) ){
-                $_SESSION["name"] = $row["name"];
+                $_SESSION["fname"] = $row["fname"];
+                $_SESSION["un"] = $row["un"];
                 $_SESSION['uid'] = str_pad($row['uid'], 4, "0", STR_PAD_LEFT);
                 $_SESSION['loggedin'] = 1;
 

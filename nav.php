@@ -14,7 +14,7 @@
       }
       else {
         echo '
-          <h2>Hello <span class="un">'.$_SESSION["name"].'</span></h2>
+          <h2>Hello <span class="un">'.$_SESSION["fname"].'</span></h2>
           <div class="loggedin-nav">
           <ul>
             <li><button><a href="map.php">Map</a></li></button>

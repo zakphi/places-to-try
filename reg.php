@@ -4,20 +4,28 @@
       <?php require_once "nav.php"; ?>
       <h2>Register</h2>
       <form method="post" action="reg.php">
-        <label>Name
-          <input type="text" name="name" class="form-control test-li" required>
+        <label class="fname">First Name
+          <input type="text" name="fname" class="form-control" required>
+        </label>
+        <label class="lname">Last Name
+          <input type="text" name="lname" class="form-control" required>
+        </label>
+        <label>Username
+          <input type="text" name="un" class="form-control" required>
         </label>
         <label>E-mail
-          <input type="email" name="email" class="form-control" id="test-li-email" required>
+          <input type="email" name="email" class="form-control" required>
         </label>
         <label>Password
-          <input type="password" name="pw" class="form-control test-li" required>
+          <input type="password" name="pw" class="form-control" required>
         </label>
         <button type="submit" name="submit" id="submit">Submit</button>
       </form>
       <?php
         if(isset($_POST['submit'])){
-          $name= $_POST['name'];
+          $fname= $_POST['fname'];
+          $lname= $_POST['lname'];
+          $un = $_POST['un'];
           $email= $_POST['email'];
           $pw = $_POST['pw'];
 
@@ -27,8 +35,10 @@
 //          school
          $connection = mysqli_connect("localhost","root","","ptt");
 
-          $query= "INSERT INTO users (`uid`, `time`, `name`, `email`, `pw`)
-          VALUES (NULL, NULL, '$name','$email','$pw');";
+          $query= "INSERT INTO users (`uid`, `time`, `fname`, `lname`, `un`, `email`, `pw`)
+          VALUES (NULL, NULL, '$fname', '$lname', '$un', '$email', '$pw');";
+
+          mysqli_query($connection, $query);
 
           $last_uid_query = "SELECT uid FROM users ORDER BY uid DESC LIMIT 1;";
           $last_uid = mysqli_query($connection, $last_uid_query);
@@ -36,11 +46,11 @@
           print_r($last_uid_arr);
           echo "<br>";
           $new_last_uid = $last_uid_arr['uid'];
-          $new_last_uid = str_pad(++$new_last_uid, 4, "0", STR_PAD_LEFT);
+          $new_last_uid = str_pad($new_last_uid, 4, "0", STR_PAD_LEFT);
           echo 'new last uid '.$new_last_uid.'<br>';
           $_SESSION['uid'] = $new_last_uid;
 
-          $locations_file = $name.'_'.$new_last_uid.'.json';
+          $locations_file = $un.'_'.$new_last_uid.'.json';
           echo $locations_file.' file created';
           fopen('data/'.$locations_file, 'w');
 
@@ -50,11 +60,10 @@
             echo $connection->error;
           }
 
-          mysqli_query($connection, $query);
-          
           $_SESSION['loggedin'] = 1;
-          $_SESSION['name'] = $name;
-          header("location: map.php");
+          $_SESSION['fname'] = $fname;
+          $_SESSION['un'] = $un;
+          header("location: add.php");
 
           mysqli_close($connection);
         }

@@ -14,6 +14,10 @@ h3{
   margin-top: 10px;
 }
 
+h2{
+  text-align: center;
+}
+
 button{
   border:1px solid #000;
   background-color: transparent;
@@ -188,5 +192,12 @@ form select{
 @media only screen and (min-width : 992px){
   #locations-table{
     width: 50%;
+  }
+  .fname,
+  .lname{
+    width: 50%;
+  }
+  .lname{
+    float: right;
   }
 }
