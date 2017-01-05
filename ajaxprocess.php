@@ -9,7 +9,7 @@
 //  echo $location;
 //  print_r(get_defined_vars());
 
-  $json_file = 'data/'.$_SESSION['name'].'_'.$_SESSION['uid'].'.json';
+  $json_file = 'data/'.$_SESSION['un'].'_'.$_SESSION['uid'].'.json';
 
 // lines 10-26 came from https://www.codeofaninja.com/2014/06/google-maps-geocoding-example-php.html
   $address = urlencode($address);
