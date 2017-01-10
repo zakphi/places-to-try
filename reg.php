@@ -29,11 +29,16 @@
           $email= $_POST['email'];
           $pw = $_POST['pw'];
 
-//        home
+          // home
           // $connection = mysqli_connect("localhost","root","root","ptt");
 
-//          school
-         $connection = mysqli_connect("localhost","root","","ptt");
+          // school
+          // $connection = mysqli_connect("localhost","root","","ptt");
+
+          // bluehost
+          $connection = mysqli_connect("localhost","philipza_admin","admin0","philipza_ptt");
+          // $dbh=mysql_connect ("localhost", "cpUsername_dbUsername", "password") or die ('I cannot connect to the database.');
+          // mysql_select_db ("cpUsername_dbName");
 
           $query= "INSERT INTO users (`uid`, `time`, `fname`, `lname`, `un`, `email`, `pw`)
           VALUES (NULL, NULL, '$fname', '$lname', '$un', '$email', '$pw');";
@@ -55,9 +60,10 @@
           fopen('data/'.$locations_file, 'w');
 
           if($connection){
-            // echo "new record created";
+            echo "new record created";
           }else{
             echo $connection->error;
+            // echo "<br>fail";
           }
 
           $_SESSION['loggedin'] = 1;

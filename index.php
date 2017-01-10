@@ -31,6 +31,11 @@
             // school
             $connection = mysqli_connect("localhost","root","","ptt");
 
+            // bluehost
+            // $connection = mysqli_connect("localhost","philipza_admin","admin0","philipza_ptt");
+            // $dbh=mysql_connect ("localhost", "cpUsername_dbUsername", "password") or die ('I cannot connect to the database.');
+            // mysql_select_db ("cpUsername_dbName");
+
             $query = "SELECT * FROM users WHERE ( un='$un' OR email='$email') AND pw='$pw' ";
 
             $loginCheck = mysqli_query($connection, $query);
