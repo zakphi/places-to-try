@@ -1,7 +1,8 @@
-<?php require_once 'header.php';
-  // echo $_SESSION['un'];
+<?php
+  require_once 'header.php';
+
   $json_file = 'data/'.$_SESSION['un'].'_'.$_SESSION['uid'].'.json';
-  // echo $json_file;
+
   if( filesize($json_file) == 0 ){
     echo "<script> var json_file = 'data/locations.json'; </script>";
   }else{

@@ -6,98 +6,29 @@ $('.close-btn').click(function() {
   $('.menu').removeClass('open');
 });
 
-// // $('#add').click(function(){
-//   // console.log('add another button clicked');
-//   $('#add_location').submit( function(e){
-//     var formData = new FormData($(this)[0]);
-//     $.ajax({
-//       url:"ajaxprocess.php",
-//       type:"post",
-//       data:formData,
-//       async:false,
-//       success:function(){
-//         var name = $('input[name="name"]').val();
-//         $('#added').html(name+" was added");
-//       },
-//       cache:false,
-//       contentType:false,
-//       processData:false
-//     });
-//     e.preventDefault();
-//     $('#add_location')[0].reset();
-//   });
-// // });
-
-// $('#done').click(function(){
-//   $("#add").click();
-//   window.location.href = 'map.php';
-//   // console.log('save and finish button clicked');
-//   // $('#add_location').submit( function(e){
-//   //   var formData = new FormData($(this)[0]);
-//   //   $.ajax({
-//   //     url:"ajaxprocess.php",
-//   //     type:"post",
-//   //     data:formData,
-//   //     async:false,
-//   //     success:function(){
-//   //       window.location.href = 'map.php';
-//   //     },
-//   //     cache:false,
-//   //     contentType:false,
-//   //     processData:false
-//   //   });
-//   // });
-// });
-
-// function add_location(){
-//   $('#add_location').submit( function(e){
-//     var formData = new FormData($(this)[0]);
-//     $.ajax({
-//       url:"ajaxprocess.php",
-//       type:"post",
-//       data:formData,
-//       async:false,
-//       success:function(){
-//         var name = $('input[name="name"]').val();
-//         $('#added').html(name+" was added");
-//       },
-//       cache:false,
-//       contentType:false,
-//       processData:false
-//     });
-//     e.preventDefault();
-//     $('#add_location')[0].reset();
-//   });
-//   $('#submit-buttons #done').show();
-//   $('#submit-buttons #add').hide();
-// }
-
-// $('#add').click(function(){
-  // add_location();
-  $('#add_location').submit( function(e){
-    var formData = new FormData($(this)[0]);
-    var form = $('#add_location');
-    $.ajax({
-      // url:"ajaxprocess.php",
-      // type:"post",
-      url:form.attr('action'),
-      type:form.attr('method'),
-      data:formData,
-      async:false,
-      success:function(){
-        var name = $('#loc_name').val();
-        $('#added').html(name+" was added");
-      },
-      cache:false,
-      contentType:false,
-      processData:false
-    });
-    e.preventDefault();
-    $('#add_location')[0].reset();
-    $('#submit-buttons #done').show();
-    $('#submit-buttons #add').hide();
+$('#add_location').submit( function(e){
+  var formData = new FormData($(this)[0]);
+  var form = $('#add_location');
+  $.ajax({
+    // url:"ajaxprocess.php",
+    // type:"post",
+    url:form.attr('action'),
+    type:form.attr('method'),
+    data:formData,
+    async:false,
+    success:function(){
+      var name = $('#loc_name').val();
+      $('#added').html(name+" was added");
+    },
+    cache:false,
+    contentType:false,
+    processData:false
   });
-// });
+  e.preventDefault();
+  $('#add_location')[0].reset();
+  $('#submit-buttons #done').show();
+  $('#submit-buttons #add').hide();
+});
 
 $('#done').click(function(){
   window.location.href = 'map.php';
@@ -139,12 +70,3 @@ if( $('body').hasClass('map') ){
   script_tag.src = 'https://maps.googleapis.com/maps/api/js?key='+api_key+'&callback=init';
   $('body').append(script_tag);
 }
-
-/*
-var lorem = new Lorem;
-lorem.type = Lorem.TEXT;
-lorem.query = '1w';
-var blah = lorem.createLorem(document.getElementById('lorem'));
-$(".test-li").val(blah);
-$("#test-li-email").val(blah+"@gmail.com");
-*/

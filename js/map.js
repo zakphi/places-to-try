@@ -11,13 +11,13 @@ function init() {
       style: google.maps.ZoomControlStyle.DEFAULT,
       position: google.maps.ControlPosition.TOP_RIGHT
     },
-    scrollwheel: false,
-//    draggable: false,
+    scrollwheel: true,
+    draggable: true
   };
 
   var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
 
-  // https://toddmotto.com/using-html5-geolocation-to-show-current-location-with-google-maps-api/
+//  https://toddmotto.com/using-html5-geolocation-to-show-current-location-with-google-maps-api/
   navigator.geolocation.getCurrentPosition(function(pos) {
     var geolocate = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
 
@@ -47,9 +47,6 @@ function init() {
         var id = value.id;
         var name = value.name;
         var address = value.location;
-//        var city = value.city;
-//        var state = value.state;
-//        var zip = value.zip;
         var lat = value.lat;
         var lng = value.lng;
         var latlngset = new google.maps.LatLng(lat, lng);
@@ -60,17 +57,6 @@ function init() {
 //        address[2] = state
 //        address[3] = zip
 
-        // var table_row = `<tr>
-        //   <td id=`+key_name[0]+`>`+id+`</td>
-        //   <td>`+name+`</td>
-        //   <td>`+address+`</td>
-        //   <td>`+city+`</td>
-        //   <td>`+state+`</td>
-        //   <td>`+zip+`</td>
-        //   <td id=`+key_name[6]+`>`+lat+`</td>
-        //   <td id=`+key_name[7]+`>`+lng+`</td>
-        //   <td><a href="http://maps.google.com/?daddr=`+address+` `+city+`, `+state+` `+zip+`" target=_blank>Get Directions</a></td>
-        // </tr>`;
         var table_row = `<tr>
           <td id=id>`+id+`</td>
           <td>`+name+`</td>
@@ -82,8 +68,6 @@ function init() {
         $('#locations-table').append(table_row);
 
         var content = `<div class="info-window "><h3>` + name + `</h3>` + address[0] + `<br>` + address[1] + `, ` + address[2] + ` ` + address[3] + `<br><a href="http://maps.google.com/?daddr=` + address[0] + address[1] + address[2] + address[3] + `" target="_blank">Get Directions</a></div>`;
-
-//        content += '<a href="edit.php">Edit</a>';
 
         var marker = new google.maps.Marker({
           map: map,
