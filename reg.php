@@ -29,14 +29,14 @@
           $email = $_POST['email'];
           $pw = $_POST['pw'];
 
-//           home
-//           $connection = mysqli_connect("localhost","root","root","ptt");
+//          home
+//          $connection = mysqli_connect("localhost","root","root","ptt");
 
-//           school
-//           $connection = mysqli_connect("localhost","root","","ptt");
+//          school
+//          $connection = mysqli_connect("localhost","root","","ptt");
 
-//           bluehost
-//           $connection = mysqli_connect("localhost","philipza_admin","admin0","philipza_ptt");
+//          bluehost
+          $connection = mysqli_connect("localhost","philipza_admin","admin0","philipza_ptt");
 
           $query = "INSERT INTO users (`uid`, `time`, `fname`, `lname`, `un`, `email`, `pw`)
           VALUES (NULL, NULL, '$fname', '$lname', '$un', '$email', '$pw');";
