@@ -29,22 +29,15 @@
           $email = $_POST['email'];
           $pw = $_POST['pw'];
 
-//          home
-//          $connection = mysqli_connect("localhost","root","root","ptt");
-
-//          school
-//          $connection = mysqli_connect("localhost","root","","ptt");
-
-//          bluehost
-          $connection = mysqli_connect("localhost","philipza_admin","admin0","philipza_ptt");
+          require_once 'dbconnect.php';
 
           $query = "INSERT INTO users (`uid`, `time`, `fname`, `lname`, `un`, `email`, `pw`)
           VALUES (NULL, NULL, '$fname', '$lname', '$un', '$email', '$pw');";
 
-          mysqli_query($connection, $query);
+          mysqli_query($con, $query);
 
           $last_uid_query = "SELECT uid FROM users ORDER BY uid DESC LIMIT 1;";
-          $last_uid = mysqli_query($connection, $last_uid_query);
+          $last_uid = mysqli_query($con, $last_uid_query);
           $last_uid_arr = mysqli_fetch_array($last_uid);
 
           $new_last_uid = $last_uid_arr['uid'];
@@ -54,7 +47,7 @@
 
           $locations_file = $un.'_'.$new_last_uid.'.json';
 
-          if($connection){
+          if($con){
             fopen('data/'.$locations_file, 'w');
 
             $_SESSION['loggedin'] = 1;
@@ -63,10 +56,10 @@
 
             header("location: add.php");
           }else{
-            echo $connection->error;
+            echo $con->error;
           }
 
-          mysqli_close($connection);
+          mysqli_close($con);
         }
 
       ?>

@@ -25,18 +25,11 @@
             $email = $_POST['login'];
             $pw = $_POST['pw'];
 
-//            home
-//            $connection = mysqli_connect("localhost","root","root","ptt");
-
-//            school
-//            $connection = mysqli_connect("localhost","root","","ptt");
-
-//            bluehost
-            $connection = mysqli_connect("localhost","philipza_admin","admin0","philipza_ptt");
+            require_once 'dbconnect.php';
 
             $query = "SELECT * FROM users WHERE ( un='$un' OR email='$email') AND pw='$pw' ";
 
-            $loginCheck = mysqli_query($connection, $query);
+            $loginCheck = mysqli_query($con, $query);
 
             $row = mysqli_num_rows($loginCheck);
 
@@ -52,7 +45,7 @@
             }else{
               echo 'try again';
             }
-            mysqli_close($connection);
+            mysqli_close($con);
           }
         }
       ?>
