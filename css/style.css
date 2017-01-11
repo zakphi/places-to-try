@@ -171,7 +171,8 @@ form select{
   text-align-last:center;
 }
 
-#added{
+#added,
+.error{
   padding-top: 15px;
 }
 
@@ -183,7 +184,8 @@ form select{
     max-width: 50%;
     margin: 0 auto;
   }
-  #added{
+  #added,
+  .error{
     width: 50%;
     margin: 0 auto;
   }

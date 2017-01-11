@@ -29,12 +29,12 @@
 
             $query = "SELECT * FROM users WHERE ( un='$un' OR email='$email') AND pw='$pw' ";
 
-            $loginCheck = mysqli_query($con, $query);
+            $login_check = mysqli_query($con, $query);
 
-            $row = mysqli_num_rows($loginCheck);
+            $row = mysqli_num_rows($login_check);
 
             if($row == 1){
-              while($row = mysqli_fetch_assoc($loginCheck) ){
+              while($row = mysqli_fetch_assoc($login_check) ){
                 $_SESSION["fname"] = $row["fname"];
                 $_SESSION["un"] = $row["un"];
                 $_SESSION['uid'] = str_pad($row['uid'], 4, "0", STR_PAD_LEFT);
